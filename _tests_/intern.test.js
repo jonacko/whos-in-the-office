@@ -16,9 +16,9 @@ test('gets intern name', () => {
 
 // gets id from getId() 
 test('gets intern ID', () => {
-    const eintern = new Intern('somebody', 1, 'somebody@email.com');
+    const intern = new Intern('somebody', 1, 'somebody@email.com');
 
-    expect(interngetId()).toEqual(expect.any(Number));
+    expect(intern.getId()).toEqual(expect.any(Number));
 });
 
 // gets emails from getEmail()

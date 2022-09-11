@@ -110,23 +110,23 @@ const askMenuQuestions = () => {
     }) 
 }
 
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
 
-    fs.writeFile(fileName, data, (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
+//     fs.writeFile(fileName, data, (err) =>
+//       err ? console.log(err) : console.log('Success!')
+//     );
 
-}
+// }
 
-// Function to initialize app:
+// // Function to initialize app:
 
-function init() {
-    return inquirer.prompt(mainQuestions);
-};
+// function init() {
+//     return inquirer.prompt(questions.mainQuestions);
+// };
 
-// Function call to initialize app:
-init()
-.then(answers => generateMarkdown(answers))
-.then(generatedHTML => writeToFile('index.html', generatedHTML));
+// // Function call to initialize app:
+// init()
+// .then(answers => generateMarkdown(answers))
+// .then(generatedHTML => writeToFile('index.html', generatedHTML));
 
 module.exports = askMenuQuestions;
