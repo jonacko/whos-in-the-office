@@ -4,6 +4,8 @@ const TeamManager = require('../lib/manager');
 const Intern = require('../lib/intern');
 const Engineer = require('../lib/engineer');
 
+const buildTeamPage = require('../src/buildHTMLPage');
+
 const managers = [];
 const interns = [];
 const engineers = [];
@@ -64,6 +66,9 @@ const askEngineerQuestions = () => {
 
     console.log(engineers);
 
+// const buildTeamPage = () => {
+
+// }
 
 
 // shows main menu again
