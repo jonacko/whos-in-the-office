@@ -113,13 +113,21 @@ const askMenuQuestions = () => {
     }) 
 }
 
-function writeToFile(fileName, data) {
+function writeToFile() {
 
-    fs.writeFile(fileName, data, (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
 
-}
+        // Define the "data" variable
+            const data = buildTeamPage(managers, engineers, interns);
+        // Define the "fileName" variable
+            const fileName = ('./dist/index3.html');
+        
+            fs.writeFile(fileName, data, (err) =>
+              err ? console.log(err) : console.log('Success!')
+            );
+        }
+
+  
+
 
 // // Function to initialize app:
 
