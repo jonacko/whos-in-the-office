@@ -1,4 +1,5 @@
 const inquirer = require("inquirer")
+const fs = require("fs")
 
 const TeamManager = require('../lib/manager');
 const Intern = require('../lib/intern');
@@ -100,23 +101,25 @@ const askMenuQuestions = () => {
             case 'Build the team':
             console.log('Build the team')
 
-            buildTeamPage(managers, engineers, interns);
-            break;
-            default: console.log('default')
-            break;
+            writeToFile() 
+            
+            // buildTeamPage(managers, engineers, interns);
+            // break;
+            // default: console.log('default')
+            // break;
 
 
         }
     }) 
 }
 
-// function writeToFile(fileName, data) {
+function writeToFile(fileName, data) {
 
-//     fs.writeFile(fileName, data, (err) =>
-//       err ? console.log(err) : console.log('Success!')
-//     );
+    fs.writeFile(fileName, data, (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
 
-// }
+}
 
 // // Function to initialize app:
 

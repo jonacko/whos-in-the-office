@@ -1,12 +1,5 @@
 const Intern = require('../lib/intern.js');
 
-// test('checks required employee properties', () => {
-//     const Engineer = new Engineer('somebody', 1, 'somebody@email.com');
-//     expect(engineer.name).toEqual(expect.any(String));
-//     expect(engineer.id).toEqual(expect.any(Number));
-//     expect(engineer.email).toEqual(expect.any(String));
-// });
-
 // gets name from getName() 
 test('gets intern name', () => {
     const intern = new Intern('somebody', 1, 'somebody@email.com');
