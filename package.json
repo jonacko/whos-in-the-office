@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jonacko/whos-in-the-office#readme",
   "dependencies": {
-    "inquirer": "^9.1.1",
+
+    "inquirer": "8.2.4",
     "install": "^0.13.0",
     "jest": "^29.0.2"
   }

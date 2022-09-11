@@ -1,14 +1,15 @@
 const inquirer = require("inquirer")
 
-const manager = require('../lib/manager');
-const intern = require('../lib/intern');
-const engineer = require('../lib/engineer');
+const TeamManager = require('../lib/manager');
+const Intern = require('../lib/intern');
+const Engineer = require('../lib/engineer');
 
 const managers = [];
 const interns = [];
 const engineers = [];
 
-const questions = require('./buildHTMLPage')
+
+const questions = require('./questions')
 
 
 const askInternQuestions = () => {
@@ -16,11 +17,12 @@ const askInternQuestions = () => {
     .prompt(questions.internQuestions)
     .then((response) => {
 
-    const intern = new intern (response.name, response.id, response.email, response.school);
+    const newIntern = new Intern (response.name, response.id, response.email, response.school);
 
-    interns.push(intern);
+    console.log(newIntern);
+    interns.push(newIntern);
 
-
+console.log(interns);
 
 // shows main menu again
 askMenuQuestions();
@@ -34,9 +36,13 @@ const askTeamManagerQuestions = () => {
     .prompt(questions.teamManagerQuestions)
     .then((response) => {
 
-    const manager = new teamManager (response.name, response.id, response.email, response.phone);
+    const manager = new TeamManager(response.name, response.id, response.email, response.phone);
 
+    console.log(manager);
     managers.push(manager);
+
+    console.log(managers);
+
 
 
 
@@ -53,7 +59,10 @@ const askEngineerQuestions = () => {
 
     const engineer = new Engineer (response.name, response.id, response.email, response.github);
 
+    console.log(engineer);
     engineers.push(engineer);
+
+    console.log(engineers);
 
 
 
@@ -68,17 +77,18 @@ askMenuQuestions();
 const askMenuQuestions = () => {
     inquirer
     .prompt(questions.mainQuestions)
-    .then((response)) => {
-        switch(response.option) {
-            case 'Add a manager':
+    .then((response)=> {
+        console.log(response);
+        switch(response.mainmenu) {
+            case 'Add team manager':
 
             askTeamManagerQuestions()
             break;
-            case 'Add an engineer':
+            case 'Add engineer':
 
             askEngineerQuestions()
             break;
-            case 'Add an intern':
+            case 'Add intern':
 
             askInternQuestions()
             break;
@@ -92,7 +102,7 @@ const askMenuQuestions = () => {
 
 
         }
-    }
+    }) 
 }
 
 module.exports = askMenuQuestions;
