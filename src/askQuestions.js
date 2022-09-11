@@ -110,4 +110,23 @@ const askMenuQuestions = () => {
     }) 
 }
 
+function writeToFile(fileName, data) {
+
+    fs.writeFile(fileName, data, (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+
+}
+
+// Function to initialize app:
+
+function init() {
+    return inquirer.prompt(mainQuestions);
+};
+
+// Function call to initialize app:
+init()
+.then(answers => generateMarkdown(answers))
+.then(generatedHTML => writeToFile('index.html', generatedHTML));
+
 module.exports = askMenuQuestions;
