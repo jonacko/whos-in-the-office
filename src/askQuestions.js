@@ -97,6 +97,8 @@ const askMenuQuestions = () => {
             case 'Build the team':
             console.log('Build the team')
 
+
+
             writeToFile() 
             
 
@@ -107,7 +109,6 @@ const askMenuQuestions = () => {
 // writes to index.html file
 
 function writeToFile() {
-
 
         // Defines the "data" variable
             const data = buildTeamPage(managers, engineers, interns);

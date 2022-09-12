@@ -1,6 +1,6 @@
 # whos-in-the-office
 - Module 10 assignment for UoB Bootcamp due 12-09-22
-- Walkthrough video link: 
+- Walkthrough video link: https://drive.google.com/file/d/1AgFqDTpjC6Wzbqhi-NcxuOMqJ1YWMW1-/view
 
 Contents:
 
@@ -13,7 +13,7 @@ Contents:
 
 This project was undertaken as a submission for a Birmingham University Bootcamp assignment, with a brief to create a README generator using the Inquirere package in Node.js.  The user story and acceptance criteria are below:
 
-[insert image 1 here]
+[insert image 1/image 2 here]
 
 
 ## 2. Key features:
@@ -30,8 +30,8 @@ This project was undertaken as a submission for a Birmingham University Bootcamp
 
 Please see commented out code for more details, but key issues are as follows:
 
-- Need to populate html properly
-- need to add working links
+- unfortunately the data from the user's responses does not populate the html page.  I could not work out how to solve this issue; I need to pass the data using a function I believe but I could not make this work.
+- CSS needs to be amended so cards are aligned horizontally
 
 
 ## 4. Credits

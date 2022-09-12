@@ -1,6 +1,4 @@
-const TeamManager = require('../lib/manager')
-const Engineer = require('../lib/engineer')
-const Intern = require('../lib/intern')
+// TODO: link data correctly - does not correctly populate html page
 
 // create Manager card
 const generateManager = function (manager) {
@@ -8,13 +6,13 @@ const generateManager = function (manager) {
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${data.manager.name}</h3>
+                <h3>${manager.getName}</h3>
                 <h4>Manager</h4>
             </div>
             <div class="card-body">
-                <p class="id">ID: ${manager.id}</p>
-                <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                <p class="office">Office Number: ${manager.officeNumber}</p>
+                <p class="id">ID: ${manager.getId}</p>
+                <p class="email">Email: <a href="mailto:${manager.getEmail}">${manager.getEmail}</a></p>
+                <p class="office">Office Number: ${manager.getOfficeNumber}</p>
             </div>
         </div>
     </div>
