@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
+    font-family: 'Heebo', sans-serif;
+font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 header {

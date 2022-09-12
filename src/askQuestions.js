@@ -119,7 +119,7 @@ function writeToFile() {
         // Define the "data" variable
             const data = buildTeamPage(managers, engineers, interns);
         // Define the "fileName" variable
-            const fileName = ('./dist/index3.html');
+            const fileName = ('./dist/index.html');
         
             fs.writeFile(fileName, data, (err) =>
               err ? console.log(err) : console.log('Success!')
