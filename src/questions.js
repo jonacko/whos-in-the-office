@@ -1,3 +1,5 @@
+// questions for user input
+
 const mainQuestions = [  {
     
         type: 'list',

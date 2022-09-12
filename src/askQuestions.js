@@ -67,10 +67,6 @@ const askEngineerQuestions = () => {
 
     console.log(engineers);
 
-// const buildTeamPage = () => {
-
-// }
-
 
 // shows main menu again
 askMenuQuestions();
@@ -103,22 +99,19 @@ const askMenuQuestions = () => {
 
             writeToFile() 
             
-            // buildTeamPage(managers, engineers, interns);
-            // break;
-            // default: console.log('default')
-            // break;
-
 
         }
     }) 
 }
 
+// writes to index.html file
+
 function writeToFile() {
 
 
-        // Define the "data" variable
+        // Defines the "data" variable
             const data = buildTeamPage(managers, engineers, interns);
-        // Define the "fileName" variable
+        // Defines the "fileName" variable
             const fileName = ('./dist/index.html');
         
             fs.writeFile(fileName, data, (err) =>
@@ -126,18 +119,6 @@ function writeToFile() {
             );
         }
 
-  
 
-
-// // Function to initialize app:
-
-// function init() {
-//     return inquirer.prompt(questions.mainQuestions);
-// };
-
-// // Function call to initialize app:
-// init()
-// .then(answers => generateMarkdown(answers))
-// .then(generatedHTML => writeToFile('index.html', generatedHTML));
 
 module.exports = askMenuQuestions;

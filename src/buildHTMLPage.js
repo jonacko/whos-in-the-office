@@ -1,10 +1,14 @@
+const TeamManager = require('../lib/manager')
+const Engineer = require('../lib/engineer')
+const Intern = require('../lib/intern')
+
 // create Manager card
 const generateManager = function (manager) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${manager.name}</h3>
+                <h3>${data.manager.name}</h3>
                 <h4>Manager</h4>
             </div>
             <div class="card-body">
